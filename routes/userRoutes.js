@@ -7,15 +7,16 @@ const {
   getUser,
   createUser,
   updateUser,
-  checkId,
-  updateFn,
-  createFn,
+  deleteUser,
+  // checkId,
+  // updateFn,
+  // createFn,
 } = require("../controllers/userController");
 
-Router.param("id", checkId);
+// Router.param("id", checkId);
 
-Router.route("/").get(getAllUsers).post(createFn, createUser);
+Router.route("/").get(getAllUsers).post(createUser);
 
-Router.route("/:id").get(getUser).patch(updateFn, updateUser);
+Router.route("/:id").get(getUser).patch(updateUser).delete(deleteUser);
 
 module.exports = Router;
