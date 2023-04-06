@@ -7,7 +7,7 @@ const {
   getUser,
   createUser,
   updateUser,
-  deleteUser,
+  deleteUser
   // checkId,
   // updateFn,
   // createFn,
